@@ -7,11 +7,11 @@ class FormLoginDesigner:
     #Esta clase va a ser la clase hereada por la clase Form_Login
 
 
-    def verificar(self):
+    def verificar_inicio(self):
         pass
     #Dejamos las funciones vacias para que no de error al ejecutar el programa
 
-    def registrar(self):
+    def registrar_usuario(self):
         pass
     #Las funciones se invocan para que no exista error al ejecutar el programa
 
@@ -66,10 +66,10 @@ class FormLoginDesigner:
         self.contraseña.pack(fill=tk.X, padx=10, pady=10)
 
         #Boton de Iniciar Sesion y sus colores
-        boton_iniciar_sesion = tk.Button(frame_formulario_bottom, text='Iniciar Sesión', bg='#567159', fg="#fff0d3", font=('Forte', 20), command = lambda: self.verificar())
+        boton_iniciar_sesion = tk.Button(frame_formulario_bottom, text='Iniciar Sesión', bg='#567159', fg="#fff0d3", font=('Forte', 20), command = lambda: self.verificar_inicio())
         boton_iniciar_sesion.pack(fill=tk.X, padx=10, pady=10)
 
-        registrarse = tk.Button(frame_formulario_bottom, text='Registrarse', bg='#567159', fg="#fff0d3", font=('Forte', 20), command = lambda: self.registrar())
+        registrarse = tk.Button(frame_formulario_bottom, text='Registrarse', bg='#567159', fg="#fff0d3", font=('Forte', 20), command = lambda: self.registrar_usuario())
         registrarse.pack(fill=tk.X, padx=10, pady=10,)
 
         self.ventana.mainloop()
