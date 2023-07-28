@@ -28,19 +28,32 @@ class MasterPanel:
     def limpiar_tabla(self):
         self.tabla_recetas.delete(*self.tabla_recetas.get_children())
 
+
+    def cerrar_aplicacion(self):
+        self.ventana.destroy()
+    
+    
     def __init__(self):
         self.ingredientes_seleccionados = []  
         # Crear ventana
-        ventana = tk.Tk()
-        ventana.title("Healty Bites")
+        self.ventana = tk.Tk()
+        self.ventana.title("Healty Bites")
+        self.ventana.geometry("1000x700")
+        self.ventana.config(bg="#fff0d3")
+        #ventana.resizable(width=0, height=0)
+        utl.centrar_ventana(self.ventana, 1000, 700)
 
         # Crear frame principal
-        frame = ttk.Frame(ventana, padding="20")
+        frame = ttk.Frame(self.ventana, padding="20")
         frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
 
         # Título
-        titulo = ttk.Label(frame, text="Healty Bites", font=("Helvetica", 20))
+        titulo = ttk.Label(frame, text="Healty Bites", font=("Forte", 20))
         titulo.grid(row=0, column=0, columnspan=2, pady=10)
+
+        # Botón "Cerrar Aplicación"
+        boton_cerrar = ttk.Button(frame, text="Cerrar Aplicación", command=self.cerrar_aplicacion)
+        boton_cerrar.grid(row=0, column=1, padx=5, pady=5, sticky='E')
 
         # Frame izquierdo
         frame_izquierdo = ttk.Frame(frame)
@@ -66,15 +79,15 @@ class MasterPanel:
         boton_buscar_recetas.grid(row=2, column=1, padx=5, pady=5)
 
         # Frame derecho
-        frame_derecho = ttk.Frame(frame)
-        frame_derecho.grid(row=1, column=1, padx=10)
+        frame_central = ttk.Frame(frame)
+        frame_central.grid(row=1, column=1, padx=10)
 
         # Label "Recetas disponibles"
-        label_recetas_disponibles = ttk.Label(frame_derecho, text="Recetas disponibles")
+        label_recetas_disponibles = ttk.Label(frame_central, text="Recetas disponibles")
         label_recetas_disponibles.pack()
 
         # Tabla con scroll vertical para recetas disponibles
-        self.tabla_recetas = ttk.Treeview(frame_derecho, columns=("Nombre", "kcal", "carbohidratos", "grasas", "proteinas"))
+        self.tabla_recetas = ttk.Treeview(frame_central, columns=("Nombre", "kcal", "carbohidratos", "grasas", "proteinas"))
 
         self.tabla_recetas.heading("#0", text="Receta")
         self.tabla_recetas.column("#0", width=200)
@@ -88,4 +101,4 @@ class MasterPanel:
         self.tabla_recetas.column("#4", width=100)
         self.tabla_recetas.pack(fill=tk.BOTH, expand=True)
 
-        ventana.mainloop()
+        self.ventana.mainloop()
