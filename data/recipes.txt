@@ -1,0 +1,30 @@
+Arroz con pollo;Arroz,Pollo;750;90;25;45
+Espaguetis a la bolonesa;Pasta,Carne,Salsa de tomate;600;80;20;30
+Ensalada Cesar;Lechuga,Pollo,Queso,Pan tostado;400;20;15;35
+Sopa de verduras;Caldo de pollo o verduras,Verduras;150;30;5;10
+Salmon a la parrilla;Salmon,Aceite de oliva,Limon;400;0;20;40
+Tacos de carne;Carne,Tortillas de maiz,Salsa de tomate;550;60;25;35
+Tortilla de patatas;Huevos,Patatas,Cebolla;350;40;20;15
+Pizza de pepperoni;Masa de pizza,Salsa de tomate,Queso,Pepperoni;800;90;40;35
+Pollo al curry;Pollo,Leche de coco,Curry en polvo;450;10;20;30
+Pasta al pesto;Pasta,Albahaca,Pinones,Queso;550;70;25;20
+Ensalada de frutas;Frutas,Miel,Limon;200;45;2;1
+Guacamole;Aguacate,Tomate,Cebolla,Limon;250;10;20;2
+Canelones de carne;Pasta,Carne,Salsa de tomate,Bechamel;600;60;30;25
+Risotto de champinones;Arroz,Champinones,Caldo de pollo o verduras;400;60;10;15
+Filete de ternera con pure de patatas;Carne,Patatas,Mantequilla;700;30;35;40
+Sopa de tomate;Tomate,Caldo de pollo o verduras;180;15;5;2
+Omelette de queso y jamon;Huevos,Queso,Jamon;350;5;25;20
+Pastel de zanahoria;Zanahorias,Nueces,Crema de queso;400;50;20;10
+Salsa bolognesa;Carne,Salsa de tomate,Cebolla,Zanahorias;300;25;15;20
+Ensalada de espinacas y fresas;Espinacas,Fresas,Nueces;250;20;15;10
+Pastel de chocolate;Chocolate,Harina,Huevos;500;60;30;10
+Pollo teriyaki con arroz;Pollo,Salsa teriyaki,Arroz;550;60;15;40
+Tarta de manzana;Manzanas,Harina,Mantequilla;400;40;25;15
+Ceviche de pescado;Pescado,Limon,Cebolla,Cilantro;200;10;5;20
+Fajitas de pollo;Pollo,Pimientos,Cebolla,Tortillas de trigo;450;40;20;30
+Galletas de avena con pasas;Harina,Avena,Pasas;150;25;5;2
+Sopa de cebolla;Cebolla,Caldo de pollo o verduras,Queso;250;20;15;10
+Sandwich BLT;Pan,Bacon,Lechuga,Tomate;400;30;20;15
+Pollo al horno con patatas;Pollo,Patatas,Aceite de oliva;550;35;25;40
+Ensalada de quinoa;Quinoa,Verduras,Vinagreta de limon;350;40;15;10

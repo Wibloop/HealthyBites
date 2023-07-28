@@ -1,22 +1,21 @@
-
-
 users_path = "./data/users.txt"
 
-def iniciar_sesion(usuario, contraseña): #-> bool(Funcionando)
-    print(usuario, contraseña)
+def iniciar_sesion(usuario, contrasena): #-> bool(Funcionando)
+    print(usuario, contrasena)
     with open(users_path, "r") as users:
         for user in users:
             exi_user, password = user.strip().split(",")
-            if exi_user == usuario and password == contraseña:
+            if exi_user == usuario and password == contrasena:
                 return True
-    return False
+    return False 
 
 
-def crear_cuenta(user, contraseña):
-    password = contraseña
+def crear_cuenta(user, password):
     with open(users_path, "a+") as users:
         users.seek(0)  # Mover el puntero al inicio del archivo
         lines = users.readlines()
+
+        # Verificar si el usuario ya existe
         for existing_user in lines:
             existing_user = existing_user.strip().split(",")
             existing_user = existing_user[0]

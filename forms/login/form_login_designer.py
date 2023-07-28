@@ -16,6 +16,7 @@ class FormLoginDesigner:
     #Las funciones se invocan para que no exista error al ejecutar el programa
 
 
+
     def __init__(self):
         self.ventana = tk.Tk()
         self.ventana.title('HealthyBites')
@@ -62,8 +63,8 @@ class FormLoginDesigner:
         #Titulo de la etiqueta de Contraseña y sus colores
         etiqueta_contraseña = tk.Label(frame_formulario_bottom, text='Contraseña', bg='#fff0d3', fg="#567159", font=('Forte', 20), anchor=tk.W)
         etiqueta_contraseña.pack(fill=tk.X, padx=10, pady=10)
-        self.contraseña = tk.Entry(frame_formulario_bottom, bg='#d8c9ac', fg="#567159", font=('Arial', 20), show='*')
-        self.contraseña.pack(fill=tk.X, padx=10, pady=10)
+        self.contrasena = tk.Entry(frame_formulario_bottom, bg='#d8c9ac', fg="#567159", font=('Arial', 20), show='*')
+        self.contrasena.pack(fill=tk.X, padx=10, pady=10)
 
         #Boton de Iniciar Sesion y sus colores
         boton_iniciar_sesion = tk.Button(frame_formulario_bottom, text='Iniciar Sesión', bg='#567159', fg="#fff0d3", font=('Forte', 20), command = lambda: self.verificar_inicio())
