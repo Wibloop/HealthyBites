@@ -49,8 +49,8 @@ class FormLoginDesigner:
         self.ventana.config(bg='#fff0d3')
         self.ventana.resizable(width=0, height=0)
         self.ventana.deiconify()  # Volvemos a mostrar la ventana principal.
-        utl.centrar_ventana(self.ventana, 800, 500)
         # Esto sirve para centrar la ventana
+        utl.centrar_ventana(self.ventana, 800, 500)
         
         self.logo = utl.leer_imagen('./static/imagenes/logo.png', (330, 350))
         # Este frame se posicionara dentro de la ventana. Es el frame o pestania del logo
@@ -98,8 +98,10 @@ class FormLoginDesigner:
         registrarse = tk.Button(frame_formulario_bottom, text='Registrarse', bg='#567159', fg="#fff0d3", font=('Forte', 20), command = lambda: self.registrar_usuario())
         registrarse.pack(fill=tk.X, padx=10, pady=10,)
 
+
     def __init__(self):
         self.ventana = tk.Tk()
         self.ventana.withdraw()  # Escondemos la ventana principal hasta que el usuario acepte las advertencias.
         self.init_advertencia()
         self.ventana.mainloop()
+

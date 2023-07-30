@@ -3,6 +3,7 @@ from tkinter import ttk, messagebox
 import util.generic as utl
 from controller.ingredient_controller import ingredientes
 from controller.recipe_controller import recetas_posibles
+from controller.instruction_controller import obtener_instruccion
 
 import tkinter as tk
 from tkinter import ttk
@@ -12,11 +13,15 @@ class MasterPanel:
         self.lista_ingredientes.delete(0, tk.END)
         self.ingredientes_seleccionados = []
 
+
+
     def agregar_ingrediente(self):
         ingrediente = self.combobox_ingrediente.get()
         if ingrediente != "" and ingrediente not in self.ingredientes_seleccionados:
             self.lista_ingredientes.insert(tk.END, ingrediente)
             self.ingredientes_seleccionados.append(ingrediente)
+
+
 
     def buscar_recetas(self):
         self.limpiar_tabla()
@@ -27,12 +32,29 @@ class MasterPanel:
         for receta in recetas:
             self.tabla_recetas.insert("", "end", text=receta[0], values=(receta[0], receta[2], receta[3] + 'gr', receta[4] + 'gr', receta[5] + 'gr'))
 
+
+
+    def mostrar_instruccion( self, event ):
+        receta_seleccionada = self.tabla_recetas.selection()
+
+        if receta_seleccionada:
+            receta = receta_seleccionada[0]
+            nombre_receta = self.tabla_recetas.item(receta, 'values')[0]
+            instruccion = obtener_instruccion(nombre_receta)
+
+            # Insertar en el elemento que queremos la instruccion de la receta.
+            print( instruccion )
+
+
+
     def limpiar_tabla(self):
         self.tabla_recetas.delete(*self.tabla_recetas.get_children())
 
 
+
     def cerrar_aplicacion(self):
         self.ventana.destroy()
+    
     
     
     def __init__(self):
@@ -77,15 +99,15 @@ class MasterPanel:
         boton_limpiar = tk.Button(frame_izquierdo, text="Limpiar", command=self.limpiar_lista)
         boton_limpiar.grid(row=2, column=0, padx=5, pady=5)
 
-        boton_buscar_recetas = ttk.Button(frame_izquierdo, text="Buscar recetas", command=self.buscar_recetas)
+        boton_buscar_recetas = tk.Button(frame_izquierdo, text="Buscar recetas", command=self.buscar_recetas)
         boton_buscar_recetas.grid(row=2, column=1, padx=5, pady=5)
 
         # Frame derecho
-        frame_central = ttk.Frame(frame)
+        frame_central = tk.Frame(frame)
         frame_central.grid(row=1, column=1, padx=10)
 
         # Label "Recetas disponibles"
-        label_recetas_disponibles = ttk.Label(frame_central, text="Recetas disponibles")
+        label_recetas_disponibles = tk.Label(frame_central, text="Recetas disponibles")
         label_recetas_disponibles.pack()
 
 
@@ -111,6 +133,6 @@ class MasterPanel:
         # Añadir la tabla al frame
         self.tabla_recetas.pack(fill=tk.BOTH, expand=True)
 
-
+        self.tabla_recetas.bind('<<TreeviewSelect>>', self.mostrar_instruccion)
 
         self.ventana.mainloop()

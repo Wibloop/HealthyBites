@@ -1,12 +1,14 @@
 from PIL import ImageTk, Image
 from tkinter import ttk, messagebox
 
+
+
+# Esto sirve para leer una imagen y redimensionarla
 def leer_imagen(path, size): 
-        #Esto sirve para leer una imagen y redimensionarla
-        return ImageTk.PhotoImage(Image.open(path).resize(size, Image.ANTIALIAS))  
+    return ImageTk.PhotoImage(Image.open(path).resize(size, Image.ANTIALIAS))  
 
 
-    #Esto sirve para centrar la ventana
+# Esto sirve para centrar la ventana
 def centrar_ventana(ventana, aplicacion_ancho, aplicacion_largo):    
     pantall_ancho = ventana.winfo_screenwidth()
     pantall_largo = ventana.winfo_screenheight()
@@ -14,9 +16,12 @@ def centrar_ventana(ventana, aplicacion_ancho, aplicacion_largo):
     posicion_y = int((pantall_largo/2) - (aplicacion_largo/2))
     return ventana.geometry(f"{aplicacion_ancho}x{aplicacion_largo}+{posicion_x}+{posicion_y}")
 
+
+# Funcion para obtener el texto de un archivo .txt
 def obtener_texto( archivo_de_texto ):
     with open(archivo_de_texto, "r", encoding="utf-8") as archivo:
         texto = archivo.read()
     return texto
 
 
+ 
