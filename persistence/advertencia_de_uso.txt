@@ -1,0 +1,8 @@
+La siguiente aplicación no ha sido diseñada para el control del peso u objetivos similares. 
+Su propósito principal es brindar educación nutricional sobre los alimentos que se consumen. 
+Si bien una de sus funciones es calcular calorías, esta herramienta se enfoca únicamente en proporcionar una parte de la información nutricional, incluyendo datos sobre carbohidratos, vitaminas y otros nutrientes.
+
+Si tienes la necesidad de conocer tus requerimientos calóricos debido a tus objetivos físicos, te recomendamos encarecidamente que consultes con especialistas en la materia, como médicos o nutricionistas. 
+Es esencial entender adecuadamente tus necesidades nutricionales para lograr una alimentación adecuada y saludable.
+
+Para usar esta aplicación, acepte los términos y condiciones.

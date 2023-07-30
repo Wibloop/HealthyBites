@@ -7,7 +7,9 @@ from controller.user_controller import iniciar_sesion, crear_cuenta
 
 from util.auth_verification import validate_credentials
 
+
 class FormLogin(FormLoginDesigner):
+
 
     def verificar_inicio(self): #-> bool(Funcionando)
         usuario = self.usuario.get()
@@ -18,6 +20,7 @@ class FormLogin(FormLoginDesigner):
             MasterPanel()
         else:
             messagebox.showerror('Login', 'Usuario o contraseña incorrectos')
+
 
 
     def registrar_usuario(self):
