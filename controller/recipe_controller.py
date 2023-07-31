@@ -9,17 +9,24 @@ ingredients_path = "./data/recipes.txt"
 # 4 -> grasas,
 # 5 -> protes ]
 
+
+# Función para obtener la lista de recetas a partir del archivo recipes.txt
+# Retorna una lista de recetas, donde cada receta es representada
 def obtener_recetas():
     recetas = []
-    with open( ingredients_path, "r" ) as file:
+    with open(ingredients_path, "r") as file:
         for line in file:
             receta = line.strip().split(";")
             receta[1] = receta[1].split(",")
-            recetas.append( receta )
+            recetas.append(receta)
     return recetas
 
-# -> retorna lista de recetas posibles con los ingredientes
-def recetas_posibles( ingredientes ):
+
+# Función para obtener una lista de recetas posibles basadas en una lista de ingredientes dados
+# Recibe como argumento la lista de ingredientes seleccionados
+# Retorna una lista con las recetas que contienen todos los ingredientes de la lista proporcionada
+
+def recetas_posibles(ingredientes):
     recetas = obtener_recetas()
     posibles = []
 
@@ -28,9 +35,9 @@ def recetas_posibles( ingredientes ):
 
         # Verifica que todos los ingredientes en la lista ingredientes
         # Existan en la lista de ingredientes de la receta
-        es_posible = all( ingrediente in ingredientes for ingrediente in ingredientes_receta )
+        es_posible = all(ingrediente in ingredientes for ingrediente in ingredientes_receta)
 
         if es_posible:
-            posibles.append( receta )
+            posibles.append(receta)
 
     return posibles

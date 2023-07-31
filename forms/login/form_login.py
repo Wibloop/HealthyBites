@@ -27,6 +27,7 @@ class FormLogin(FormLoginDesigner):
             # Si las credenciales no son válidas, mostramos un mensaje de error
             messagebox.showerror('Login', 'Usuario o contraseña incorrectos')
 
+
     # Función para registrar un nuevo usuario
     def registrar_usuario(self):
         # Obtenemos los datos del usuario y contraseña ingresados en los campos

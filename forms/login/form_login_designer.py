@@ -26,9 +26,9 @@ class FormLoginDesigner:
         self.ventana.destroy()
 
     def init_advertencia(self):
-        CONDICIONES_DE_USO = self.obteniendo_texto( "./persistence/advertencia_de_uso.txt" )
+        CONDICIONES_DE_USO = self.obteniendo_texto( "./persistence/condiciones_de_uso.txt" )
         self.ventana_adv = tk.Toplevel(self.ventana)
-        self.ventana_adv.title('Advertencias de uso')
+        self.ventana_adv.title('Condiciones de uso')
         self.ventana_adv.geometry('800x500')
         self.ventana_adv.config(bg='#fff0d3')
         self.ventana_adv.resizable(width=0, height=0)
